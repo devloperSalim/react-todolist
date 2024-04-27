@@ -3,12 +3,19 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import HelloWorld from './helloWorld/HelloWorld'
+import TextFields from './forms/TextFields'
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <HelloWorld />
+    <HelloWorld  name="salim"/>
+    <TextFields inputName='lastName' lebelName="nom">
+      enter your last name
+    </TextFields>
+    <TextFields inputName='firstName' lebelName="prenom">
+      enter your first name
+    </TextFields>
   </React.StrictMode>
 );
 

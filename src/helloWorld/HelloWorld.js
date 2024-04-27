@@ -1,7 +1,7 @@
-// function HelloWorld(){
+// function HelloWorld(props){
     
 //     return(
-//         <h1>hello world</h1>
+//         <h1>hello {props.name}</h1>
 //     )
 // }
 // export default HelloWorld;
@@ -13,6 +13,6 @@ import { Component } from "react";
 export default class HelloWorld extends Component {
 
     render(){
-        return <h1>hello world from class</h1>
+        return <h1>hello {this.props.name} from class</h1>
     }
 }
