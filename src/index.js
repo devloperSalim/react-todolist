@@ -5,17 +5,18 @@ import App from './App';
 import HelloWorld from './helloWorld/HelloWorld'
 import TextFields from './forms/TextFields'
 import reportWebVitals from './reportWebVitals';
+import Fruit from './Fruits/Fruit';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+const fruitList = [
+  'limone',
+  'appel',
+  'dla7',
+  'frise'
+]
 root.render(
   <React.StrictMode>
-    <HelloWorld  name="salim"/>
-    <TextFields inputName='lastName' lebelName="nom">
-      enter your last name
-    </TextFields>
-    <TextFields inputName='firstName' lebelName="prenom">
-      enter your first name
-    </TextFields>
+    <Fruit fruta={fruitList}/>
   </React.StrictMode>
 );
 
