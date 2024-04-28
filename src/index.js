@@ -6,6 +6,7 @@ import HelloWorld from './helloWorld/HelloWorld'
 import TextFields from './forms/TextFields'
 import reportWebVitals from './reportWebVitals';
 import Fruit from './Fruits/Fruit';
+import Counter from './Counter/Counter';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 const fruitList = [
@@ -16,7 +17,7 @@ const fruitList = [
 ]
 root.render(
   <React.StrictMode>
-    <Fruit fruta={fruitList}/>
+    <Counter/>
   </React.StrictMode>
 );
 
