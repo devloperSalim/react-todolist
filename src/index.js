@@ -6,6 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import Event from './Events/Event';
 import Counter from './Counter/Counter';
 import Form from './Form/Form';
+import FruitList from './Fruits/FruitList/FruitList';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 const fruitList = [
@@ -16,7 +17,7 @@ const fruitList = [
 ]
 root.render(
   <React.StrictMode>
-      <Form/>
+      <FruitList/>
   </React.StrictMode>
 );
 
