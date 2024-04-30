@@ -17,7 +17,7 @@ const fruitList = [
 ]
 root.render(
   <React.StrictMode>
-      <FruitList/>
+      <Counter initialValue={0} step={2}/>
   </React.StrictMode>
 );
 

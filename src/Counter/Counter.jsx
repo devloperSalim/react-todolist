@@ -8,25 +8,30 @@ import { useEffect, useState } from "react";
 //         super(props);
 //         this.state = {
 //             counter:0,
-//             date :undefined
 //         }
 //     }
 
 
 //     handlClick = () =>{
-//         setInterval(()=>{
+
 //             this.setState(
 //                 preveState => {
 //                     return{counter : preveState.counter+1}
 //                 }
 //             )
-//         },1000)
 //     }
 //     handelReset = () =>{
 //         this.setState({counter:0})
 //     }
 
 
+//     componentDidMount(){
+//         console.log('component mounted')
+//     }
+
+//     componentDidUpdate(){
+//         console.log('component updated')
+//     }
 //     render(){
 //         return<>
 //         <button onClick={this.handlClick}>clikc to add</button>
@@ -40,6 +45,31 @@ import { useEffect, useState } from "react";
 function Counter(props){
 
     const [count ,  setCount] = useState(0);
+    const [time , setTime] = useState(new Date());
+    let timer = null
+
+
+
+    // useEffect(()=>{
+    //     console.log('every time');
+    // })
+
+
+    useEffect(()=>{
+        console.log('counter changed');
+    },[count])
+
+    useEffect(()=>{
+        console.log('component mounted');
+        timer = setInterval(()=>{
+            console.log('teck')
+            setTime(new Date)
+        },1000)
+
+        return () =>{
+            clearInterval(timer)
+        }
+    },[])
 
     return<>
         <button onClick={()=>{
@@ -50,12 +80,13 @@ function Counter(props){
             click to add
         </button>
         <button onClick={()=>{
-            setCount(props.initialState)
+            setCount(0)
         }}>
             reset
         </button>
 
         <h2>{count}</h2>
+        <h3>{time.toLocaleString()}</h3>
     </>
 }
 export default Counter;
