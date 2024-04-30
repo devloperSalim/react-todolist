@@ -59,17 +59,17 @@ function Counter(props){
         console.log('counter changed');
     },[count])
 
-    useEffect(()=>{
-        console.log('component mounted');
-        timer = setInterval(()=>{
-            console.log('teck')
-            setTime(new Date)
-        },1000)
+    // useEffect(()=>{
+    //     console.log('component mounted');
+    //     timer = setInterval(()=>{
+    //         console.log('teck')
+    //         setTime(new Date)
+    //     },1000)
 
-        return () =>{
-            clearInterval(timer)
-        }
-    },[])
+    //     return () =>{
+    //         clearInterval(timer)
+    //     }
+    // },[])
 
     return<>
         <button onClick={()=>{

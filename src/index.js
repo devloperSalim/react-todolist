@@ -3,10 +3,9 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import Event from './Events/Event';
-import Counter from './Counter/Counter';
 import Form from './Form/Form';
-import FruitList from './Fruits/FruitList/FruitList';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 const fruitList = [
@@ -17,7 +16,7 @@ const fruitList = [
 ]
 root.render(
   <React.StrictMode>
-      <Counter initialValue={0} step={2}/>
+      <Form/>
   </React.StrictMode>
 );
 
