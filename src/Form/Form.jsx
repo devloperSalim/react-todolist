@@ -50,6 +50,7 @@ function Form(){
         console.log(formData)
     }
 
+
     return<>
               {JSON.stringify(formData)}
 
@@ -96,7 +97,21 @@ function Form(){
         </form>
         </div>
 
-        
+        <div className="py-4 m-4 w-75">
+            <table className="table table-responsive">
+                <thead>
+                    <tr>
+                        <th scope="col">Name</th>
+                        <th>Age</th>
+                        <th>country</th>
+                        <th>gender</th>
+                        <th>accept rol</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
         
     </>
 }

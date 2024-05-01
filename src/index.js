@@ -5,6 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Form from './Form/Form';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import FormList from './Form/FormList';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -16,7 +17,7 @@ const fruitList = [
 ]
 root.render(
   <React.StrictMode>
-      <Form/>
+      <FormList/>
   </React.StrictMode>
 );
 
