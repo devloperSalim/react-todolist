@@ -6,6 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import Form from './Form/Form';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import FormList from './Form/FormList';
+import Page from './LangueSwitcher/Page';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -17,7 +18,7 @@ const fruitList = [
 ]
 root.render(
   <React.StrictMode>
-      <FormList/>
+      <Page/>
   </React.StrictMode>
 );
 
