@@ -7,6 +7,7 @@ import Form from './Form/Form';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import FormList from './Form/FormList';
 import Page from './LangueSwitcher/Page';
+import FormValidation from './Form/FormValidation';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -18,7 +19,7 @@ const fruitList = [
 ]
 root.render(
   <React.StrictMode>
-      <Page/>
+      <FormValidation/>
   </React.StrictMode>
 );
 
