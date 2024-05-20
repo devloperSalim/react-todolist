@@ -8,6 +8,10 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import FormList from './Form/FormList';
 import Page from './LangueSwitcher/Page';
 import FormValidation from './Form/FormValidation';
+import TextFields from './forms/TextFields';
+import Fruit from './Fruits/Fruit';
+import FruitList from './Fruits/FruitList/FruitList';
+import HelloWorld from './helloWorld/HelloWorld';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -15,11 +19,12 @@ const fruitList = [
   'limone',
   'appel',
   'dla7',
-  'frise'
+  'frise',
+  'ldris'
 ]
 root.render(
   <React.StrictMode>
-      <FormValidation/>
+      <Form/>
   </React.StrictMode>
 );
 

@@ -27,6 +27,8 @@ function Form(){
 
     //
 
+    
+    const [submissions, setSubmissions] = useState([]);
     const [formData , setFormData] = useState({
         name :'',
         age :'',
@@ -46,6 +48,7 @@ function Form(){
 
     const handleSubmit = (e) =>{
         e.preventDefault()
+        setSubmissions([...submissions, formData]);
 
         console.log(formData)
     }
@@ -109,7 +112,16 @@ function Form(){
                     </tr>
                 </thead>
                 <tbody>
-                </tbody>
+                        {submissions.map((submission, index) => (
+                            <tr key={index}>
+                                <td>{submission.name}</td>
+                                <td>{submission.age}</td>
+                                <td>{submission.country}</td>
+                                <td>{submission.genre}</td>
+                                <td>{submission.accept ? "Yes" : "No"}</td>
+                            </tr>
+                        ))}
+                    </tbody>
             </table>
         </div>
         
