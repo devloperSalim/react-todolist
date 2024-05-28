@@ -25,7 +25,7 @@ const fruitList = [
 ]
 root.render(
   <React.StrictMode>
-      <App/>
+      <FormList/>
   </React.StrictMode>
 );
 
