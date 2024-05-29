@@ -9,7 +9,7 @@ export default function FormList() {
   const acceptRef = useRef();
 
 //   const [formData, setFormData] = useState({});
-  const [submissions, setSubmissions] = useState([]);
+  const [formData,  setFormData] = useState([]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -22,7 +22,7 @@ export default function FormList() {
       gender: gender,
       accept: acceptRef.current.checked,
     };
-    setSubmissions([...submissions, newSubmission]);
+    setFormData([...formData, newSubmission]);
     resetForm();
   };
 
@@ -95,7 +95,7 @@ export default function FormList() {
             </tr>
           </thead>
           <tbody>
-            {submissions.map((submission) => (
+            {formData.map((submission) => (
               <tr key={submission.id}>
                 <td>{submission.name}</td>
                 <td>{submission.age}</td>
