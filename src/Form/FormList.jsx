@@ -8,8 +8,7 @@ export default function FormList() {
   const genderFemaleRef = useRef();
   const acceptRef = useRef();
 
-//   const [formData, setFormData] = useState({});
-  const [formData,  setFormData] = useState([]);
+  const [formData, setFormData] = useState([]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -92,6 +91,7 @@ export default function FormList() {
               <th>Country</th>
               <th>Gender</th>
               <th>Accept</th>
+              <th>Actions</th>
             </tr>
           </thead>
           <tbody>
@@ -102,6 +102,13 @@ export default function FormList() {
                 <td>{submission.country}</td>
                 <td>{submission.gender}</td>
                 <td>{submission.accept ? 'Yes' : 'No'}</td>
+                <td>
+                  <button onClick={()=>{
+                    setFormData(
+                      formData.filter(data => data.id !== submission.id)
+                    )
+                  }} className="btn btn-danger">Delete</button>
+                </td>
               </tr>
             ))}
           </tbody>

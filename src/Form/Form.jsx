@@ -119,6 +119,11 @@ function Form(){
                                 <td>{submission.country}</td>
                                 <td>{submission.genre}</td>
                                 <td>{submission.accept ? "Yes" : "No"}</td>
+                                <td>
+                                <button onClick={() => {
+                        setSubmissions(submissions.filter(form => form.name !== submission.name));
+                    }}>Delete</button>
+                                </td>
                             </tr>
                         ))}
                     </tbody>
