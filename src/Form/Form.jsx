@@ -50,7 +50,7 @@ function Form(){
         e.preventDefault()
         setSubmissions([...submissions, formData]);
 
-        console.log(formData)
+        
     }
 
 
